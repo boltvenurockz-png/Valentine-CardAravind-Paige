@@ -1,1 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For You ❤️</title>
 
+<style>
+body{
+  margin:0;
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:linear-gradient(135deg,#ff9a9e,#fad0c4);
+  font-family: Arial, sans-serif;
+}
+
+.card{
+  background:white;
+  width:320px;
+  padding:30px;
+  border-radius:20px;
+  text-align:center;
+  box-shadow:0 20px 40px rgba(0,0,0,0.2);
+}
+
+.hidden{ display:none; }
+
+h1{ color:#ff4d6d; }
+
+button{
+  margin-top:20px;
+  padding:12px 25px;
+  border:none;
+  border-radius:25px;
+  background:#ff4d6d;
+  color:white;
+  font-size:16px;
+  cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card" id="p1">
+  <h1>Hey my love ❤️</h1>
+  <p>I made something special just for you…</p>
+  <div style="font-size:40px;">🧸</div>
+  <button onclick="go(2)">Next 💕</button>
+</div>
+
+<div class="card hidden" id="p2">
+  <p>Every day with you feels safe, warm, and happy 🧸<br>
+  Just like a hug that never ends.</p>
+  <button onclick="go(3)">Next 🥰</button>
+</div>
+
+<div class="card hidden" id="p3">
+  <p>You are my best friend,<br>
+  my comfort,<br>
+  my favorite person in the world 💖</p>
+  <button onclick="go(4)">Next 💖</button>
+</div>
+
+<div class="card hidden" id="p4">
+  <p>So before I ask you something important…<br><br>
+  I just want you to know…</p>
+  <h1>I love you. Always ❤️</h1>
+  <button onclick="go(5)">One last thing 😘</button>
+</div>
+
+<div class="card hidden" id="p5">
+  <h1>Will you be my Valentine? 💘</h1>
+  <button onclick="yes()">Yes 💖</button>
+  <button onclick="no()">No 🙈</button>
+</div>
+
+<script>
+function go(n){
+  document.querySelectorAll('.card').forEach(c=>c.classList.add('hidden'));
+  document.getElementById('p'+n).classList.remove('hidden');
+}
+
+function yes(){
+  alert("YAY!!! 💖💖💖\nHappy Valentine’s Day, my love 🧸");
+}
+
+function no(){
+  alert("Nice try 😌\nYou’re already my Valentine.\nThere is no other option ❤️🧸");
+}
+</script>
+
+</body>
+</html>
